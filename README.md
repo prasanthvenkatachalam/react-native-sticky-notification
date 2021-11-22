@@ -16,7 +16,7 @@ import { multiply } from "react-native-sticky-notification";
 // ...
 
 const result = await multiply(3, 7);
-```
+``
 
 ## Contributing
 
