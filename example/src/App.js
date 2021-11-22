@@ -8,7 +8,6 @@ import {
   startService,
   removeOnClickListener,
 } from 'react-native-sticky-notification';
-import AnotherActivity from './AnotherActivity';
 
 export default function App() {
   let config = {
@@ -16,6 +15,7 @@ export default function App() {
     channelName: 'sampleproject', //required
     displayTexts: ['abc', 'def', 'ghi'], //default value is ["b1","b2","b3","b4","b5"]
     exitEnabled: false, //default value is true            //If true Service stopped when click the last button
+    icon: 'app-icon-rounded', //1. app-icon 2.app-icon-rounded 3.other  //default "app-icon"
   };
 
   useEffect(() => {
@@ -24,13 +24,13 @@ export default function App() {
     };
   }, []);
 
-  const onPress = (e) => {
-    console.log(e, 'onPressed');
+  const onPressButton = (clickedButton) => {
+    console.log(clickedButton, 'onPressed');
   };
 
   return (
     <View style={styles.container}>
-      <StickyNotificationService onPress={(e) => onPress(e)} />
+      <StickyNotificationService onPressButton={onPressButton} />
 
       <TouchableOpacity
         style={styles.button}
@@ -49,7 +49,13 @@ export default function App() {
       <TouchableOpacity
         style={styles.button}
         onPress={() => {
-          startService();
+          startService()
+            .then((res) => {
+              console.log(res, 'response');
+            })
+            .catch((err) => {
+              console.log(err, 'error');
+            });
         }}
       >
         <Text>Start Service</Text>
@@ -57,7 +63,13 @@ export default function App() {
       <TouchableOpacity
         style={styles.button}
         onPress={() => {
-          stopService();
+          stopService()
+            .then((res) => {
+              console.log(res, 'res');
+            })
+            .catch((err) => {
+              console.log(err, 'err');
+            });
         }}
       >
         <Text>Stop Service</Text>

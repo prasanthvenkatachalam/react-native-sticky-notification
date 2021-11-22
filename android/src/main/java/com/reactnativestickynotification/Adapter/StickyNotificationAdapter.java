@@ -4,6 +4,7 @@ import static com.reactnativestickynotification.Adapter.RNProps.CHANNEL_ID;
 import static com.reactnativestickynotification.Adapter.RNProps.CHANNEL_NAME;
 import static com.reactnativestickynotification.Adapter.RNProps.DISPLAY_TEXTS;
 import static com.reactnativestickynotification.Adapter.RNProps.EXIT_ENABLED;
+import static com.reactnativestickynotification.Adapter.RNProps.ICON;
 
 import android.util.Log;
 
@@ -58,6 +59,11 @@ public class StickyNotificationAdapter implements StickyNotificationProps {
   }
 
   @Override
+  public String icon() {
+    return getStringValue(ICON,"app-icon");
+  }
+
+  @Override
   public void onPress(String clickedButton) {
     WritableMap map = Arguments.createMap();
     map.putString("action", clickedButton);
@@ -69,7 +75,7 @@ public class StickyNotificationAdapter implements StickyNotificationProps {
       promise.resolve(clickedButton);
 
     } catch (Exception e){
-      Log.e("ReactNative", "Caught Exception: " + e.getMessage());
+
       promise.reject("Error",e.getMessage());
     }
 

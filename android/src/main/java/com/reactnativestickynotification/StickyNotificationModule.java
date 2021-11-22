@@ -1,10 +1,9 @@
 package com.reactnativestickynotification;
 
-import android.app.ActivityManager;
+
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
-import android.app.Service;
-import android.content.Context;
+
 import android.content.Intent;
 import android.os.Build;
 import android.util.Log;
@@ -21,7 +20,6 @@ import com.facebook.react.module.annotations.ReactModule;
 import com.reactnativestickynotification.Adapter.StickyNotificationAdapter;
 import com.reactnativestickynotification.Adapter.StickyNotificationProps;
 
-import java.util.List;
 
 @ReactModule(name = StickyNotificationModule.NAME)
 public class StickyNotificationModule extends ReactContextBaseJavaModule {
@@ -45,23 +43,30 @@ public class StickyNotificationModule extends ReactContextBaseJavaModule {
   @ReactMethod
   public void createChannel(@Nullable ReadableMap options, Promise promise) {
     if(options!=null){
-      StickyNotificationModule.props = new StickyNotificationAdapter(options,promise);
+      try{
+        StickyNotificationModule.props = new StickyNotificationAdapter(options,promise);
 
+        CHANNEL_ID = props.channelId(); //Set for global use
 
-      CHANNEL_ID = props.channelId(); //Set for global use
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+          NotificationChannel serviceChannel = new NotificationChannel(
+            props.channelId(),
+            props.channelName(),
+            NotificationManager.IMPORTANCE_DEFAULT
+          );
 
-      if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-        NotificationChannel serviceChannel = new NotificationChannel(
-          props.channelId(),
-          props.channelName(),
-          NotificationManager.IMPORTANCE_DEFAULT
-        );
+          NotificationManager manager = reactContext.getSystemService(NotificationManager.class);
+          manager.createNotificationChannel(serviceChannel);
 
-        NotificationManager manager = reactContext.getSystemService(NotificationManager.class);
-        manager.createNotificationChannel(serviceChannel);
-
+        }
+        promise.resolve("Channel Created Successfully");
       }
-
+      catch (Exception e){
+        promise.reject("Error",e.getMessage());
+      }
+    }
+    else{
+      promise.reject("Error","Values must not be Null");
     }
   }
 
@@ -85,16 +90,22 @@ public class StickyNotificationModule extends ReactContextBaseJavaModule {
 
     }
     catch(Exception e){
-      Log.d("StartError","StartError "+ e);
+
       promise.reject("SERVICE_NOT_STARTED",e.getMessage());
     }
 
   }
 
   @ReactMethod
-  public void stopService() {
-    Intent intent = new Intent(reactContext,StickyNotificationService.class);
-    reactContext.stopService(intent);
+  public void stopService(Promise promise) {
+    try{
+      Intent intent = new Intent(reactContext,StickyNotificationService.class);
+      reactContext.stopService(intent);
+      promise.resolve("SERVICE_STOPPED");
+    }
+    catch(Exception e){
+      promise.reject("ERROR",e.getMessage());
+    }
 
   }
 

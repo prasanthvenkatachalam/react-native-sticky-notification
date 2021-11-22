@@ -22,7 +22,7 @@ export function multiply(a, b) {
   return StickyNotification.multiply(a, b);
 }
 
-export const StickyNotificationService = ({ onPress }) => {
+export const StickyNotificationService = ({ onPressButton }) => {
   // useEffect(() => {
   //   return () => {
   //     DeviceEventEmitter.removeSubscription(subscription);
@@ -31,8 +31,8 @@ export const StickyNotificationService = ({ onPress }) => {
 
   // let subscription =
 
-  DeviceEventEmitter.addListener('action', (e) => {
-    onPress(e);
+  DeviceEventEmitter.addListener('action', (buttonName) => {
+    onPressButton(buttonName);
   });
 
   return null;
@@ -63,27 +63,24 @@ export const createChannel = ({ channelId, channelName, ...props }) => {
       return;
     }
 
-    resolve({
-      channelId: channelId,
-      channelName: channelName,
-      ...props,
-    });
     StickyNotification.createChannel({
       channelId: channelId,
       channelName: channelName,
       ...props,
-    });
+    })
+      .then((res) => {
+        resolve(res);
+      })
+      .catch((error) => {
+        reject(error);
+      });
   });
 };
 
-export const startService = (e) => {
-  StickyNotification.startService()
-    .then((e) => {})
-    .catch((e) => {
-      console.log(e);
-    });
+export const startService = () => {
+  return StickyNotification.startService();
 };
 
 export const stopService = () => {
-  StickyNotification.stopService();
+  return StickyNotification.stopService();
 };

@@ -1,11 +1,10 @@
 package com.example.reactnativestickynotification;
 
-import static com.reactnativestickynotification.StickyNotificationModule.props;
 
 import com.facebook.react.ReactActivity;
 import com.reactnativestickynotification.Adapter.StickyNotificationHelper;
 
-import android.util.Log;
+
 import android.content.Intent;
 
 
@@ -25,14 +24,8 @@ public boolean isFromMinimized = false;
   @Override
   public  void  onNewIntent(Intent  intent) {
     super.onNewIntent(intent);
-//    String btn = intent.getStringExtra ("action");
-//
-//    if(btn!=null){
-//      props.onPress(btn);
-//      Log.d("YESSIFF","YESSS");
-//    }
     isFromMinimized=true;
-StickyNotificationHelper.open(intent);
+    StickyNotificationHelper.open(intent);
 
   }
 
@@ -42,29 +35,6 @@ StickyNotificationHelper.open(intent);
     if(!isFromMinimized){
       StickyNotificationHelper.open(getIntent());
     }
-
-//    String btn = getIntent().getStringExtra("action");
-//
-//      if(btn!=null){
-//        props.onPress(btn);
-//        props.onPress(props.displayTexts()[2]);
-//        Log.d("NOOO",btn);
-//        props.onPress(props.displayTexts()[2]);
-//      }
-
-//    if(!isFromminimizedState){
-//      String btn = getIntent().getStringExtra("action");
-//      Log.d("NOOO","NOOO");
-//      if(btn!=null){
-////        props.onPress(props.displayTexts()[2]);
-//        Log.d("NOOO",btn);
-////        props.onPress(props.displayTexts()[2]);
-//      }
-//    }
-
-
-
-
 
   }
 

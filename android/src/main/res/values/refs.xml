@@ -6,6 +6,12 @@
   <item type="mipmap" name="ic_launcher">
     @mipmap/ic_launcher
   </item>
+  <item type="mipmap" name="ic_launcher_round">
+    @mipmap/ic_launcher_round
+  </item>
+  <item type="drawable" name="notification_icon">
+    @drawable/notification_icon
+  </item>
   <item type="id" name="b1">
     @id/b1
   </item>

@@ -7,5 +7,6 @@ public interface StickyNotificationProps {
   String channelName();
   Boolean exitEnabled();
   int buttonsCount();
+  String icon();
   void onPress(String clickedButton);
 }

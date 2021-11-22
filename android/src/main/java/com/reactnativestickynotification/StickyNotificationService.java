@@ -195,8 +195,18 @@ public class StickyNotificationService extends Service{
       .setContentText("Notification Service")
       .setCustomContentView(notificationLayout)
       .setContentIntent(pendingIntent)
-      .setAutoCancel(true)
-      .setSmallIcon(R.mipmap.ic_launcher);
+      .setAutoCancel(true);
+
+if(props.icon().equals("app-icon")){
+  notificationBuilder.setSmallIcon(R.mipmap.ic_launcher);
+}
+else if(props.icon().equals("app-icon-rounded")){
+  notificationBuilder.setSmallIcon(R.mipmap.ic_launcher_round);
+}
+else if(props.icon().equals("other")){
+  notificationBuilder.setSmallIcon(R.drawable.notification_icon);
+}
+
 
 
     Intent recordIntent = new Intent(this, StickyNotificationService.class);
