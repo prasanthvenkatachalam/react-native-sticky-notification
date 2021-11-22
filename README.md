@@ -210,13 +210,80 @@ public boolean isFromMinimized = false;     //Add this Line
 
 
 ## Usage
+In your ```App.js``` (Root Folder)
+
+```Note: You can use this for Navigations```
 
 ```js
-import { multiply } from "react-native-sticky-notification";
+//...
+import {
+  StickyNotificationService,
+  createChannel,
+  stopService,
+  startService,
+  removeOnClickListener,
+} from 'react-native-sticky-notification';
 
+export const App = () => {
 // ...
 
-const result = await multiply(3, 7);
+let config = {
+    channelId: "YOUR_CHANNEL_ID",             //required
+    channelName: 'YOUR_CHANNEL_NAME',           //required
+    displayTexts: ['abc', 'def', 'ghi'],    //default value is ["b1","b2","b3","b4","b5"]
+    exitEnabled: false,                     //default value is true    //If true Service stopped when click the last button
+    icon: 'app-icon-rounded',               //1. app-icon 2.app-icon-rounded 3.other  //default "app-icon"
+  };
+  
+  useEffect(() => {
+  
+    // ...
+ 
+    return () => {
+      // ...
+      removeOnClickListener();
+    };
+  }, []);
+  
+  createChannel(config)
+            .then((action) => {
+              console.log(action);   // returns Successfull Message
+            })
+            .catch((error) => {
+              console.log(error);    // returns Error if any problem
+            });
+   
+   startService()
+            .then((res) => {
+              console.log(res);       // returns Successfull Message
+            })
+            .catch((err) => {
+              console.log(err);       // returns Error Message
+            });
+   
+   stopService()
+            .then((res) => {
+              console.log(res);      // returns Successfull Message
+            })
+            .catch((err) => {
+              console.log(err);      // returns Error Message
+            });
+            
+    const onPressButton = (clickedButton) => {
+          console.log(clickedButton);           //returns {"action": CLICKED_BUTTON_NAME ( from config.displayTexts which you created above )}. 
+          
+          // Do your operations according to this result...
+    };
+  
+  // ...
+  
+  return(
+  // ...
+  <StickyNotificationService onPressButton={onPressButton} />
+  // ...
+  )
+}
+  
 ```
 
 ## Contributing
