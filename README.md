@@ -306,8 +306,9 @@ function | Yes
 
 ## Config
 This is an Object Which you pass as parameter to the ```createChannel()``` API.
+
 Key | type | Required | Default
---- | ---  
+--- | --- | --- | ---  
 channelId | String | Yes   
 channelName | String | Yes   
 displayTexts | String Array | No | ["b1","b2","b3","b4","b5"]
