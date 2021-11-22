@@ -286,9 +286,12 @@ let config = {
   
 ```
 
+## API
+
 Method | Type | Description 
 --- | --- | --- 
-createChannel(channelConfig) | Promise | 283 
+createChannel(channelConfig) | Promise | Create the Notification Channel
+startService() | Promise | To Start the Notification Service
 
 
 ## Contributing
