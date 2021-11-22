@@ -44,7 +44,8 @@ Create an xml file inside the ```layout``` directory, and the file name should b
   
   <!-- One Button Code Start -->  
   <LinearLayout
-    android:id="@+id/b1"                        <!-- ID should be same -->   
+    android:id="@+id/b1"                        
+                <!-- ID should be same -->   
     android:layout_margin="10dp"
     android:gravity="center"
     android:layout_width="wrap_content"
@@ -58,17 +59,18 @@ Create an xml file inside the ```layout``` directory, and the file name should b
       android:layout_marginHorizontal="10dp"
       android:src="@drawable/record"/>            <!-- android:src="@drawable/YOUR_IMAGE_NAME" -->
     <TextView
-     android:id="@+id/t1"                         <!-- ID should be same --> 
+     android:id="@+id/t1"                         
+              <!-- ID should be same --> 
      android:layout_width="wrap_content"
      android:layout_height="wrap_content"
-     android:text="Record"
      android:layout_gravity="center"
      android:gravity="center"/>
   </LinearLayout>
 <!-- One Button Code End -->
 
   <LinearLayout
-    android:id="@+id/b2"                           <!-- ID should be same -->
+    android:id="@+id/b2"                           
+                <!-- ID should be same -->
     android:layout_margin="10dp"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -82,16 +84,17 @@ Create an xml file inside the ```layout``` directory, and the file name should b
       android:layout_marginHorizontal="10dp"
       android:src="@drawable/screenshot"/>         <!-- android:src="@drawable/YOUR_IMAGE_NAME" -->
     <TextView
-      android:id="@+id/t2"                         <!-- ID should be same -->
+      android:id="@+id/t2"                         
+              <!-- ID should be same -->
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:text="Screenshot"
       android:layout_gravity="center"
       android:gravity="center"/>
   </LinearLayout>
 
   <LinearLayout
-    android:id="@+id/b3"                            <!-- ID should be same -->
+    android:id="@+id/b3"                            
+                <!-- ID should be same -->
     android:layout_margin="10dp"
     android:gravity="center"
     android:layout_width="wrap_content"
@@ -105,16 +108,17 @@ Create an xml file inside the ```layout``` directory, and the file name should b
       android:layout_marginHorizontal="10dp"
       android:src="@drawable/tools"/>                <!-- android:src="@drawable/YOUR_IMAGE_NAME" -->
     <TextView
-      android:id="@+id/t3"                           <!-- ID should be same -->
+      android:id="@+id/t3"                           
+              <!-- ID should be same -->
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:text="Tools"
       android:layout_gravity="center"
       android:gravity="center"/>
   </LinearLayout>
 
   <LinearLayout
-    android:id="@+id/b4"                              <!-- ID should be same -->
+    android:id="@+id/b4"                              
+                <!-- ID should be same -->
     android:layout_margin="10dp"
     android:gravity="center"
     android:layout_width="wrap_content"
@@ -128,16 +132,17 @@ Create an xml file inside the ```layout``` directory, and the file name should b
       android:layout_marginHorizontal="10dp"
       android:src="@drawable/home"/>                   <!-- android:src="@drawable/YOUR_IMAGE_NAME" -->
     <TextView
-      android:id="@+id/t4"                             <!-- ID should be same -->
+      android:id="@+id/t4"                             
+              <!-- ID should be same -->
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:text="Home"
       android:layout_gravity="center"
       android:gravity="center"/>
   </LinearLayout>
 
   <LinearLayout
-    android:id="@+id/b5"                               <!-- ID should be same -->
+    android:id="@+id/b5"                               
+                <!-- ID should be same -->
     android:layout_margin="10dp"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -151,10 +156,10 @@ Create an xml file inside the ```layout``` directory, and the file name should b
       android:layout_marginHorizontal="10dp"
       android:src="@drawable/exit"/>                    <!-- android:src="@drawable/YOUR_IMAGE_NAME" -->
     <TextView
-      android:id="@+id/t5"                              <!-- ID should be same -->                              
+      android:id="@+id/t5"                              
+              <!-- ID should be same -->                              
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:text="Exit"
       android:layout_gravity="center"
       android:gravity="center"/>
   </LinearLayout>
