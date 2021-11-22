@@ -287,13 +287,32 @@ let config = {
 ```
 
 ## API
-
 Method | Type | Description 
 --- | --- | --- 
 createChannel(channelConfig) | Promise | Create the Notification Channel.
 startService() | Promise | To Start the Notification Service.
 stopService() | Promise | To Stop the Notification Service.
-removeOnClickListener() | Function | To Remove the Listeners. \nIt should be used when the app is in Dead State. 
+removeOnClickListener() | Function | To Remove the Listeners. It should be used when the app is in Dead State.
+
+## Props
+```onPressButton```
+
+When Clicking the Button on Notification Service, 
+it will call and returns the name of button as Parameter, which you clicked.
+
+Type | Required  
+--- | ---  
+function | Yes 
+
+## Config
+This is an Object Which you pass as parameter to the ```createChannel()``` API.
+Key | type | Required | Default
+--- | ---  
+channelId | String | Yes |  
+channelName | String | Yes |  
+displayTexts | String Array | No | ["b1","b2","b3","b4","b5"]
+exitEnabled | Boolean | No |  true
+icon | String | No | "app-icon"
 
 
 
