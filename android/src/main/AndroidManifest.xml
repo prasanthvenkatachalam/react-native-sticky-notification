@@ -1,4 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.reactnativestickynotification">
-
+  <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+  <application>
+    <service android:name=".StickyNotificationService" android:enabled="true"/>
+  </application>
 </manifest>

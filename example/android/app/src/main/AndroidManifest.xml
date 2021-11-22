@@ -2,7 +2,7 @@
   package="com.example.reactnativestickynotification">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
+  <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
     <application
       android:name=".MainApplication"
       android:label="@string/app_name"
@@ -22,6 +22,7 @@
         </intent-filter>
       </activity>
       <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+      <service android:name="com.reactnativestickynotification.StickyNotificationService" android:enabled="true"/>
     </application>
 
 </manifest>

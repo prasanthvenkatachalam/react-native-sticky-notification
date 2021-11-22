@@ -3,6 +3,7 @@ package com.reactnativestickynotification;
 import androidx.annotation.NonNull;
 
 import com.facebook.react.ReactPackage;
+import com.facebook.react.bridge.JavaScriptModule;
 import com.facebook.react.bridge.NativeModule;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.uimanager.ViewManager;
@@ -20,7 +21,9 @@ public class StickyNotificationPackage implements ReactPackage {
         return modules;
     }
 
-    @NonNull
+
+
+  @NonNull
     @Override
     public List<ViewManager> createViewManagers(@NonNull ReactApplicationContext reactContext) {
         return Collections.emptyList();
