@@ -4,6 +4,7 @@ Customizable Sticky Notification for Android
 
 ## Installation
 
+### Step1
 ```sh
 npm install react-native-sticky-notification
 ```
