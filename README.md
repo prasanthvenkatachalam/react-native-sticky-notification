@@ -29,6 +29,8 @@ Go to your android/app/src/main/res/drawable. If the "res" and "drawable" direct
 
 Add the Image resources (uses for buttons background images) inside the "drawable" directory
 
+![img_1](https://user-images.githubusercontent.com/43330632/142827206-7066089e-62e8-49f1-a2d0-cda2e2bd4236.png)
+
 
 
 ## Usage
