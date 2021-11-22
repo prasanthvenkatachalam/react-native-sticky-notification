@@ -1,6 +1,6 @@
 # react-native-sticky-notification
 
-Customizable Sticky Notification for Android
+Customizable Sticky Notification for Android, that contains maximum of five clickable buttons. This act as a Service in android. You have to use the buttons respectively for any operataions in your project.
 
 ## Installation
 
@@ -24,16 +24,11 @@ Go to your android/app/src/main/AndroidManifest.xml and then Register Service by
 </application>
 ```
 
-
 ### Step 4
-Register Service in your manifest inside application.
-```sh
+Go to your android/app/src/main/res/drawable. If the "res" and "drawable" directories does not exist, then you have to create it and continue the below steps  
 
-<application>
-    ....
-    <service android:name=".StickyNotificationService" android:enabled="true"/>
-</application>
-```
+Add the Image resources (uses for buttons background images) inside the "drawable" directory
+
 
 
 ## Usage
