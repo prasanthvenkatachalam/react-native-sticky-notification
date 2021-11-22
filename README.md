@@ -9,13 +9,13 @@ Customizable Sticky Notification for Android, that contains maximum of five clic
 npm install react-native-sticky-notification
 ```
 ### Step 2
-Go to your android/app/src/main/AndroidManifest.xml and then add Permissions for Foreground Service in your android manifest as below.
+Go to your ```android/app/src/main/AndroidManifest.xml``` and then add Permissions for Foreground Service in your ```AndroidManifest.xml``` as below.
 ```xml
 <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>    <!--   Add this   -->
 ```
 
 ### Step 3
-Go to your android/app/src/main/AndroidManifest.xml and then Register Service by adding this line inside "application tag"
+Go to your ```android/app/src/main/AndroidManifest.xml``` and then Register Service by adding this line inside ```application tag```
 ```xml
 
 <application>
@@ -25,12 +25,12 @@ Go to your android/app/src/main/AndroidManifest.xml and then Register Service by
 ```
 
 ### Step 4
-Go to your android/app/src/main/res/drawable. If the ```res``` and ```drawable``` directories does not exist, then you have to create it and continue the below steps.
+Go to your ```android/app/src/main/res/drawable```. If the ```res``` and ```drawable``` directories does not exist, then you have to create it and continue the below steps.
 
 Add the Image resources (uses for buttons background images) inside the ```drawable``` directory.
 
 ### Step 5
-Go to your android/app/src/main/res/layout. If the ```layout``` directory does not exist inside the ```res``` directory, then you have to create it and continue the below steps.
+Go to your ```android/app/src/main/res/layout```. If the ```layout``` directory does not exist inside the ```res``` directory, then you have to create it and continue the below steps.
 
 Create an xml file inside the ```layout``` directory, and the file name should be ```notification_panel.xml```, then copy and paste the below code to the ```notification_panel.xml``` file and make the changes mentioned as comments in the below code.
 
