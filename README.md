@@ -44,7 +44,7 @@ Create an xml file inside the ```layout``` directory, and the file name should b
   android:layout_height="wrap_content">
 
   <LinearLayout
-    android:id="@+id/b1"
+    android:id="@+id/b1"     <!-- Id name should be same -->   
     android:layout_margin="10dp"
     android:gravity="center"
     android:layout_width="wrap_content"
