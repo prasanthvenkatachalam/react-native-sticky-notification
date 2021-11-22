@@ -168,6 +168,45 @@ This is the Notification Appearance Design in the Notification Panel.
 </LinearLayout>
 ```
 
+### Step 6
+Update your ```MainActivity.java``` to use ```react-native-sticky-notification``` via the following changes.
+
+```java
+import com.facebook.react.ReactActivity;
+
+// ...other imports
+
+import android.content.Intent;    //Add this Line
+import com.reactnativestickynotification.Adapter.StickyNotificationHelper;  //Add this Line
+
+public class MainActivity extends ReactActivity {
+
+public boolean isFromMinimized = false;     //Add this Line
+   
+    // ...other code 
+    
+  //Add this....Begin... 
+  @Override
+  public  void  onNewIntent(Intent  intent) {
+    super.onNewIntent(intent);
+    isFromMinimized=true;
+    StickyNotificationHelper.open(intent);
+  }
+  
+  @Override
+  protected  void  onStart() {
+    super.onStart();
+    if(!isFromMinimized){
+      StickyNotificationHelper.open(getIntent());
+    }
+
+  }
+  //...End
+  
+  //...other code  
+}
+```
+
 
 
 ## Usage
