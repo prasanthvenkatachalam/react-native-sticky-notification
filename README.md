@@ -25,11 +25,14 @@ Go to your android/app/src/main/AndroidManifest.xml and then Register Service by
 ```
 
 ### Step 4
-Go to your android/app/src/main/res/drawable. If the "res" and "drawable" directories does not exist, then you have to create it and continue the below steps  
+Go to your android/app/src/main/res/drawable. If the ```sh res ``` and "drawable" directories does not exist, then you have to create it and continue the below steps  
 
-Add the Image resources (uses for buttons background images) inside the "drawable" directory
+Add the Image resources (uses for buttons background images) inside the "drawable" directory.
 
-![img_1](https://user-images.githubusercontent.com/43330632/142827206-7066089e-62e8-49f1-a2d0-cda2e2bd4236.png)
+### Step 5
+Go to your android/app/src/main/res/layout. If the "layout" directory does not exist, then you have to create it and continue the below steps  
+
+Create an xml file inside the layout directory as the name should be notification_panel.xml
 
 
 
