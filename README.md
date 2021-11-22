@@ -286,9 +286,9 @@ let config = {
   
 ```
 
-Method | #Type | #Description | 
---- | --- | --- | --- |
-Seconds | 301 | 283 | 
+Attempt | Type | Description 
+--- | --- | --- 
+Seconds | 301 | 283 
 
 
 ## Contributing
