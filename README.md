@@ -286,9 +286,9 @@ let config = {
   
 ```
 
-Attempt | Type | Description 
+Method | Type | Description 
 --- | --- | --- 
-Seconds | 301 | 283 
+createChannel(channelConfig) | Promise | 283 
 
 
 ## Contributing
