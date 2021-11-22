@@ -9,9 +9,18 @@ Customizable Sticky Notification for Android
 npm install react-native-sticky-notification
 ```
 ### Step 2
-Add Permissions for foreground service in your android manifest.
+Add Permissions for Foreground Service in your android manifest.
 ```sh
 <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+```
+
+### Step 3
+Register Service in your manifest inside application.
+```sh
+
+<application>
+    <service android:name=".StickyNotificationService" android:enabled="true"/>
+  </application>
 ```
 
 ## Usage
