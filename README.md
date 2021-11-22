@@ -34,6 +34,8 @@ Go to your ```android/app/src/main/res/layout```. If the ```layout``` directory 
 
 Create an xml file inside the ```layout``` directory, and the file name should be ```notification_panel.xml```, then copy and paste the below code to the ```notification_panel.xml``` file and make the changes mentioned as comments in the below code.
 
+This is the Notification Appearance Design in the Notification Panel.
+
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
