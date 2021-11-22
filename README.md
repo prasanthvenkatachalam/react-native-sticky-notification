@@ -290,8 +290,11 @@ let config = {
 
 Method | Type | Description 
 --- | --- | --- 
-createChannel(channelConfig) | Promise | Create the Notification Channel
-startService() | Promise | To Start the Notification Service
+createChannel(channelConfig) | Promise | Create the Notification Channel.
+startService() | Promise | To Start the Notification Service.
+stopService() | Promise | To Stop the Notification Service.
+removeOnClickListener() | Function | To Remove the Listeners. It should be used when the app is in Dead State. 
+
 
 
 ## Contributing
