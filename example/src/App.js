@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 import {
@@ -15,7 +15,7 @@ export default function App() {
     channelName: 'sampleproject', //required
     displayTexts: ['abc', 'def', 'ghi'], //default value is ["b1","b2","b3","b4","b5"]
     exitEnabled: false, //default value is true            //If true Service stopped when click the last button
-    icon: 'app-icon-rounded', //1. app-icon 2.app-icon-rounded 3.other  //default "app-icon"
+    icon: 'app-icon', //1. app-icon 2.app-icon-rounded 3.other  //default "app-icon"
   };
 
   useEffect(() => {

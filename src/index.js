@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { NativeModules, Platform, DeviceEventEmitter } from 'react-native';
 
 const LINKING_ERROR =
@@ -23,14 +22,6 @@ export function multiply(a, b) {
 }
 
 export const StickyNotificationService = ({ onPressButton }) => {
-  // useEffect(() => {
-  //   return () => {
-  //     DeviceEventEmitter.removeSubscription(subscription);
-  //   };
-  // }, []);
-
-  // let subscription =
-
   DeviceEventEmitter.addListener('action', (buttonName) => {
     onPressButton(buttonName);
   });
