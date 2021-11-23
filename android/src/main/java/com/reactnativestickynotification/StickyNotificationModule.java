@@ -6,7 +6,6 @@ import android.app.NotificationManager;
 
 import android.content.Intent;
 import android.os.Build;
-import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;

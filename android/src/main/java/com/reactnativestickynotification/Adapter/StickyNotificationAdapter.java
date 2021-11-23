@@ -6,7 +6,6 @@ import static com.reactnativestickynotification.Adapter.RNProps.DISPLAY_TEXTS;
 import static com.reactnativestickynotification.Adapter.RNProps.EXIT_ENABLED;
 import static com.reactnativestickynotification.Adapter.RNProps.ICON;
 
-import android.util.Log;
 
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.Promise;

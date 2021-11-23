@@ -11,7 +11,6 @@ import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
 import android.os.IBinder;
-import android.util.Log;
 import android.view.View;
 import android.widget.RemoteViews;
 
@@ -116,12 +115,6 @@ public class StickyNotificationService extends Service{
 
   private void enableActivity(String pressedButton) {
 
-//    if (isAppOnForeground(this)) {
-//      Intent intent1 = new Intent(this, getMainActivityClass(StickyNotificationModule.reactContext));
-//      intent1.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-//
-//      startActivity(intent1);
-//    }
     if(!isAppOnForeground(this)) {
       Intent intent1 = new Intent(this, getMainActivityClass(StickyNotificationModule.reactContext));
       intent1.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -144,7 +137,6 @@ public class StickyNotificationService extends Service{
       }
     }
     return false;
-//    return true;
   }
 
 

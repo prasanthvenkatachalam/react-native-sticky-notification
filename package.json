@@ -1,6 +1,6 @@
 {
   "name": "react-native-sticky-notification",
-  "version": "0.1.0",
+  "version": "1.0.3",
   "description": "Customizable Sticky Notification for Android",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -25,7 +25,6 @@
     "test": "jest",
     "typescript": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
-    "prepare": "bob build",
     "release": "release-it",
     "example": "yarn --cwd example",
     "pods": "cd example && pod-install --quiet",
@@ -36,7 +35,10 @@
     "ios",
     "android"
   ],
-  "repository": "https://github.com/senthalan2/react-native-sticky-notification",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/senthalan2/react-native-sticky-notification.git"
+  },
   "author": "Senthalan <senthalan2@gmail.com> (https://github.com/senthalan2)",
   "license": "MIT",
   "bugs": {
@@ -143,5 +145,10 @@
         }
       ]
     ]
-  }
+  },
+  "directories": {
+    "example": "example",
+    "lib": "lib"
+  },
+  "dependencies": {}
 }
