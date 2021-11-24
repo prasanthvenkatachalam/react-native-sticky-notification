@@ -3,11 +3,7 @@ package com.example.reactnativestickynotification;
 
 import com.facebook.react.ReactActivity;
 import com.reactnativestickynotification.Adapter.StickyNotificationHelper;
-
-
 import android.content.Intent;
-
-
 public class MainActivity extends ReactActivity {
 
 public boolean isFromMinimized = false;

@@ -31,9 +31,8 @@
     "bootstrap": "yarn example && yarn && yarn pods"
   },
   "keywords": [
-    "react-native",
-    "ios",
-    "android"
+    "sticky-notification",
+    "foreground-service"
   ],
   "repository": {
     "type": "git",

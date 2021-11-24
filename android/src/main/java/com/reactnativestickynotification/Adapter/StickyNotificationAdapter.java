@@ -7,6 +7,8 @@ import static com.reactnativestickynotification.Adapter.RNProps.EXIT_ENABLED;
 import static com.reactnativestickynotification.Adapter.RNProps.ICON;
 
 
+
+
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReadableMap;
@@ -61,6 +63,8 @@ public class StickyNotificationAdapter implements StickyNotificationProps {
   public String icon() {
     return getStringValue(ICON,"app-icon");
   }
+
+
 
   @Override
   public void onPress(String clickedButton) {

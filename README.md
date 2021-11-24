@@ -20,7 +20,7 @@ Go to your ```android/app/src/main/AndroidManifest.xml``` and then Register Serv
 
 <application>
     ....
-    <service android:name=".StickyNotificationService" android:enabled="true"/>   <!--   Add this   -->
+    <service android:name="com.reactnativestickynotification.StickyNotificationService" android:enabled="true"/>   <!--   Add this   -->
 </application>
 ```
 

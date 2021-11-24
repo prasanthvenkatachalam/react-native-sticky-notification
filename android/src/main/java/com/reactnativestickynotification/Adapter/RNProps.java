@@ -9,7 +9,6 @@ public enum RNProps {
   CHANNEL_NAME("channelName"),
   EXIT_ENABLED("exitEnabled"),
   ICON("icon");
-
   private String value;
 
   RNProps(String value) {
