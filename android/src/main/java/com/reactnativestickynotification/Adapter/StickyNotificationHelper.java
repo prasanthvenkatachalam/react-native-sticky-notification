@@ -3,11 +3,8 @@ package com.reactnativestickynotification.Adapter;
 import static com.reactnativestickynotification.StickyNotificationModule.props;
 
 import android.content.Intent;
-<<<<<<< HEAD
-import android.os.Looper;
 
-=======
->>>>>>> 0c8a7b2f16dc10a531e2deda5911979a9ccf5e07
+import android.os.Looper;
 
 public class StickyNotificationHelper {
 

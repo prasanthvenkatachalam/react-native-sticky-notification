@@ -6,12 +6,6 @@ import static com.reactnativestickynotification.Adapter.RNProps.DISPLAY_TEXTS;
 import static com.reactnativestickynotification.Adapter.RNProps.EXIT_ENABLED;
 import static com.reactnativestickynotification.Adapter.RNProps.ICON;
 
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> 0c8a7b2f16dc10a531e2deda5911979a9ccf5e07
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReadableMap;
