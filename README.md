@@ -1,4 +1,4 @@
-# react-native-sticky-notification
+# react-native-sticky-notification..
 
 Customizable Sticky Notification for Android, that contains maximum of five clickable buttons. This act as a Service in android. You have to use the buttons respectively for any operataions in your react native project.
 
